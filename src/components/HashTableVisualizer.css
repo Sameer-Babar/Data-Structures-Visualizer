@@ -1,0 +1,81 @@
+.hashtable-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.hashtable {
+  display: flex; /* Arrange items in a row */
+  flex-wrap: wrap; /* Allow wrapping if there are too many items */
+  justify-content: center; /* Center the items horizontally */
+  gap: 10px; /* Add spacing between cells */
+}
+
+.cell {
+  display: flex;
+  flex-direction: column; /* Arrange index and value vertically */
+  align-items: center; /* Center the text horizontally */
+  justify-content: center;
+  border: 1px solid #ccc; /* Add border for better visualization */
+  padding: 10px;
+  width: 100px; /* Set a fixed width for cells */
+  height: 80px; /* Set a fixed height for cells */
+  text-align: center;
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+}
+.index {
+  font-weight: bold; /* Highlight the index */
+}
+
+.cell:hover {
+  background-color: lightblue;
+}
+
+.value {
+  margin-top: 5px; /* Add some space between index and value */
+  word-wrap: break-word; /* Ensure long values wrap within the cell */
+}
+.log {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.setup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+select {
+  margin: 5px;
+  padding: 5px;
+}

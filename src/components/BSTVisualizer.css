@@ -1,0 +1,58 @@
+.bst-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.tree-container {
+  margin: 20px auto;
+}
+
+.bst-container .controls {
+  margin: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.controls input {
+  padding: 5px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.controls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+
+.bst-container.log {
+  margin-top: 10px;
+  color: #555;
+}
+
+.bst-container.link {
+  stroke: #ccc;
+  stroke-width: 2px;
+  opacity: 0;
+}
+
+.bst-container.node circle {
+  fill: #69b3a2;
+  stroke: #333;
+  stroke-width: 2px;
+  opacity: 0;
+}
+
+.bst-container.node text {
+  font-size: 12px;
+  fill: white;
+  opacity: 0;
+}
+
+.bst-container .node circle {
+  transition: transform 0.3s ease, opacity 0.5s ease;
+}

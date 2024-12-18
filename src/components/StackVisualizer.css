@@ -1,0 +1,86 @@
+/* Stack visualization area */
+.stack-visualization {
+  position: relative;
+  height: 350px; /* Height for the stack area */
+  overflow-y: auto; /* Scroll when content exceeds the container height */
+  border: 2px solid #333;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column-reverse; /* Reverse stacking to start from the bottom */
+  align-items: center; /* Center blocks horizontally */
+}
+
+/* Stack blocks styling */
+.stack-block {
+  width: 200px;
+  height: 40px;
+  background-color: #69b3a2;
+  border: 2px solid #333;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 10px; /* Space between blocks */
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Push animation */
+.stack-block.isNew {
+  transform: scale(1.2); /* Slight grow effect */
+  opacity: 0.8;
+}
+
+/* Pop animation */
+.stack-block.isRemoved {
+  transform: scale(0.8); /* Shrink effect */
+  opacity: 0; /* Fade out */
+}
+
+/* Highlight for the top block (when "Top" is clicked) */
+.stack-block.highlight-temporary {
+  background-color: #ff7f0e; /* Highlight color */
+}
+
+/* Controls section for input and buttons */
+.stack-container .controls {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  gap: 10px; /* Space between the input and buttons */
+  justify-content: center; /* Center the buttons and input horizontally */
+  align-items: center; /* Align items vertically in the center */
+}
+
+/* Styling for input and buttons */
+.stack-container .controls input[type="text"] {
+ 
+ 
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.stack-container .controls button {
+  
+  font-size: 14px;
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.stack-container button:hover {
+  background-color: #3e8e41; /* Slightly darker shade when hovered */
+}
+.stack-container {
+  width: 250px; /* Adjust the width to fit the blocks */
+  margin: 0 auto; /* Center the container horizontally */
+  padding-top: 10px; /* Some space at the top for better visuals */
+}
+.stack-container .log-message {
+  text-align: center;
+}

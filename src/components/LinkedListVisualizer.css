@@ -1,0 +1,64 @@
+.linkedlist-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  max-width: 1200px; /* Optional: limit the width to ensure it doesn't stretch too wide */
+}
+
+
+.linkedlist-container .linkedlist-svg {
+  height: 200px; /* Reduced height to make space for buttons */
+  display: block;
+  margin: 0 auto;
+}
+
+.linkedlist-container .controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow controls to wrap in smaller screens */
+}
+
+.linkedlist-container .controls input {
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px; /* Add margin to prevent elements from touching */
+  max-width: 200px; /* Limit the input width */
+}
+
+.linkedlist-container.controls button {
+  padding: 10px;
+  margin: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.linkedlist-container.controls button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.linkedlist-container.log {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #555;
+  max-width: 100%; /* Ensure the log doesn't stretch too much */
+  overflow-x: auto; /* Allow horizontal scrolling if log text overflows */
+}
+
+.linkedlist-container.index-input-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.linkedlist-container.index-input-container input {
+  padding: 10px;
+  margin-right: 10px;
+  width: 100px; /* Make the input fields smaller */
+  max-width: 100%; /* Ensure it doesn't stretch too much */
+}

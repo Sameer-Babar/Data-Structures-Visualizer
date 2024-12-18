@@ -1,0 +1,137 @@
+/* Specific styles for AVL tree visualizer */
+.avl-visualizer {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Controls specific to AVL tree visualizer */
+.avl-visualizer .abc {
+  display: flex;
+  gap: 15px; /* Adjust spacing between elements */
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center; /* Centers the controls */
+  margin-top: 20px; /* Space above the input and buttons */
+  margin-bottom: 20px;
+}
+.avl-visualizer .controls input,
+.avl-visualizer .controls button {
+
+ 
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  
+  
+}
+
+.avl-visualizer .controls input {
+ 
+  border: 1px solid #ccc;
+}
+
+.avl-visualizer .controls button {
+  background-color: #0288d1;
+  color: white;
+  cursor: pointer;
+}
+
+.avl-visualizer .controls button:hover {
+  background-color: #0269a1;
+}
+
+/* Log specific to AVL tree */
+.avl-visualizer .log {
+  margin: 15px 0;
+  font-weight: bold;
+  color: #0288d1;
+}
+
+/* Specific styles for AVL tree node */
+.avl-visualizer .node circle {
+  transition: transform 0.5s ease, fill 0.3s ease;
+}
+
+.avl-visualizer .node text {
+  transition: transform 0.5s ease, fill 0.3s ease;
+}
+
+/* Node hover effect */
+.avl-visualizer .node circle:hover {
+  fill: #3e8e41;
+}
+
+/* Define color change keyframe animation for AVL node */
+@keyframes avl-colorChange {
+  0% {
+      fill: #4CAF50; /* Original green */
+  }
+  50% {
+      fill: orange; /* Temporary color change */
+  }
+  100% {
+      fill: #4CAF50; /* Reset to original color */
+  }
+}
+
+/* Define movement animation keyframe for left rotation in AVL tree */
+@keyframes avl-leftRotation {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(-50px, 50px); /* Left and down movement */
+  }
+}
+
+/* Define movement animation keyframe for right rotation in AVL tree */
+@keyframes avl-rightRotation {
+  0% {
+      transform: translate(0, 0);
+  }
+  100% {
+      transform: translate(50px, 50px); /* Right and down movement */
+  }
+}
+
+/* Apply color change animation to AVL node */
+.avl-visualizer .color-change {
+  fill: #ff9800; /* Highlight color */
+  animation: avl-colorChange 1s ease;
+}
+
+/* Apply left rotation animation to AVL node */
+.avl-visualizer .left-rotation {
+  transform: rotate(-45deg);
+  transition: transform 1s ease;
+}
+
+/* Apply right rotation animation to AVL node */
+.avl-visualizer .right-rotation {
+  transform: rotate(45deg);
+  transition: transform 1s ease;
+}
+
+/* Node enter animation for AVL tree */
+.avl-visualizer .node-enter {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Node exit animation for AVL tree */
+.avl-visualizer .node-exit {
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Apply transitions to node and link for AVL tree */
+.avl-visualizer .node {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.avl-visualizer .link {
+  transition: stroke-opacity 0.5s ease;
+}
